@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B7C316212783BB8300106616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C316202783BB8300106616 /* AppDelegate.swift */; };
+		B7C316232783BB8300106616 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C316222783BB8300106616 /* SceneDelegate.swift */; };
+		B7C316252783BB8300106616 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C316242783BB8300106616 /* ViewController.swift */; };
+		B7C316282783BB8300106616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7C316262783BB8300106616 /* Main.storyboard */; };
+		B7C3162A2783BB8500106616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7C316292783BB8500106616 /* Assets.xcassets */; };
+		B7C3162D2783BB8500106616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7C3162B2783BB8500106616 /* LaunchScreen.storyboard */; };
+		B7C316382783BB8600106616 /* ShopGoodwillAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C316372783BB8600106616 /* ShopGoodwillAPITests.swift */; };
+		B7C316422783BB8600106616 /* ShopGoodwillAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C316412783BB8600106616 /* ShopGoodwillAPIUITests.swift */; };
+		B7C316442783BB8600106616 /* ShopGoodwillAPIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C316432783BB8600106616 /* ShopGoodwillAPIUITestsLaunchTests.swift */; };
+		B7C316522783BC3400106616 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B7C316512783BC3400106616 /* Alamofire */; };
+		B7C316552783BDF300106616 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = B7C316542783BDF300106616 /* SwiftyJSON */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B7C316342783BB8600106616 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7C316152783BB8300106616 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7C3161C2783BB8300106616;
+			remoteInfo = ShopGoodwillAPI;
+		};
+		B7C3163E2783BB8600106616 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7C316152783BB8300106616 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7C3161C2783BB8300106616;
+			remoteInfo = ShopGoodwillAPI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B7C3161D2783BB8300106616 /* ShopGoodwillAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopGoodwillAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7C316202783BB8300106616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B7C316222783BB8300106616 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B7C316242783BB8300106616 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7C316272783BB8300106616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B7C316292783BB8500106616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7C3162C2783BB8500106616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B7C3162E2783BB8500106616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7C316332783BB8600106616 /* ShopGoodwillAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopGoodwillAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7C316372783BB8600106616 /* ShopGoodwillAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopGoodwillAPITests.swift; sourceTree = "<group>"; };
+		B7C3163D2783BB8600106616 /* ShopGoodwillAPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopGoodwillAPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7C316412783BB8600106616 /* ShopGoodwillAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopGoodwillAPIUITests.swift; sourceTree = "<group>"; };
+		B7C316432783BB8600106616 /* ShopGoodwillAPIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopGoodwillAPIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B7C3161A2783BB8300106616 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7C316552783BDF300106616 /* SwiftyJSON in Frameworks */,
+				B7C316522783BC3400106616 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7C316302783BB8600106616 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7C3163A2783BB8600106616 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B7C316142783BB8300106616 = {
+			isa = PBXGroup;
+			children = (
+				B7C3161F2783BB8300106616 /* ShopGoodwillAPI */,
+				B7C316362783BB8600106616 /* ShopGoodwillAPITests */,
+				B7C316402783BB8600106616 /* ShopGoodwillAPIUITests */,
+				B7C3161E2783BB8300106616 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B7C3161E2783BB8300106616 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7C3161D2783BB8300106616 /* ShopGoodwillAPI.app */,
+				B7C316332783BB8600106616 /* ShopGoodwillAPITests.xctest */,
+				B7C3163D2783BB8600106616 /* ShopGoodwillAPIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7C3161F2783BB8300106616 /* ShopGoodwillAPI */ = {
+			isa = PBXGroup;
+			children = (
+				B7C316202783BB8300106616 /* AppDelegate.swift */,
+				B7C316222783BB8300106616 /* SceneDelegate.swift */,
+				B7C316242783BB8300106616 /* ViewController.swift */,
+				B7C316262783BB8300106616 /* Main.storyboard */,
+				B7C316292783BB8500106616 /* Assets.xcassets */,
+				B7C3162B2783BB8500106616 /* LaunchScreen.storyboard */,
+				B7C3162E2783BB8500106616 /* Info.plist */,
+			);
+			path = ShopGoodwillAPI;
+			sourceTree = "<group>";
+		};
+		B7C316362783BB8600106616 /* ShopGoodwillAPITests */ = {
+			isa = PBXGroup;
+			children = (
+				B7C316372783BB8600106616 /* ShopGoodwillAPITests.swift */,
+			);
+			path = ShopGoodwillAPITests;
+			sourceTree = "<group>";
+		};
+		B7C316402783BB8600106616 /* ShopGoodwillAPIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B7C316412783BB8600106616 /* ShopGoodwillAPIUITests.swift */,
+				B7C316432783BB8600106616 /* ShopGoodwillAPIUITestsLaunchTests.swift */,
+			);
+			path = ShopGoodwillAPIUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B7C3161C2783BB8300106616 /* ShopGoodwillAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7C316472783BB8600106616 /* Build configuration list for PBXNativeTarget "ShopGoodwillAPI" */;
+			buildPhases = (
+				B7C316192783BB8300106616 /* Sources */,
+				B7C3161A2783BB8300106616 /* Frameworks */,
+				B7C3161B2783BB8300106616 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShopGoodwillAPI;
+			packageProductDependencies = (
+				B7C316512783BC3400106616 /* Alamofire */,
+				B7C316542783BDF300106616 /* SwiftyJSON */,
+			);
+			productName = ShopGoodwillAPI;
+			productReference = B7C3161D2783BB8300106616 /* ShopGoodwillAPI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B7C316322783BB8600106616 /* ShopGoodwillAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7C3164A2783BB8600106616 /* Build configuration list for PBXNativeTarget "ShopGoodwillAPITests" */;
+			buildPhases = (
+				B7C3162F2783BB8600106616 /* Sources */,
+				B7C316302783BB8600106616 /* Frameworks */,
+				B7C316312783BB8600106616 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7C316352783BB8600106616 /* PBXTargetDependency */,
+			);
+			name = ShopGoodwillAPITests;
+			productName = ShopGoodwillAPITests;
+			productReference = B7C316332783BB8600106616 /* ShopGoodwillAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B7C3163C2783BB8600106616 /* ShopGoodwillAPIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7C3164D2783BB8600106616 /* Build configuration list for PBXNativeTarget "ShopGoodwillAPIUITests" */;
+			buildPhases = (
+				B7C316392783BB8600106616 /* Sources */,
+				B7C3163A2783BB8600106616 /* Frameworks */,
+				B7C3163B2783BB8600106616 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7C3163F2783BB8600106616 /* PBXTargetDependency */,
+			);
+			name = ShopGoodwillAPIUITests;
+			productName = ShopGoodwillAPIUITests;
+			productReference = B7C3163D2783BB8600106616 /* ShopGoodwillAPIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B7C316152783BB8300106616 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					B7C3161C2783BB8300106616 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					B7C316322783BB8600106616 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = B7C3161C2783BB8300106616;
+					};
+					B7C3163C2783BB8600106616 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = B7C3161C2783BB8300106616;
+					};
+				};
+			};
+			buildConfigurationList = B7C316182783BB8300106616 /* Build configuration list for PBXProject "ShopGoodwillAPI" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B7C316142783BB8300106616;
+			packageReferences = (
+				B7C316502783BC3400106616 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				B7C316532783BDF300106616 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
+			productRefGroup = B7C3161E2783BB8300106616 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7C3161C2783BB8300106616 /* ShopGoodwillAPI */,
+				B7C316322783BB8600106616 /* ShopGoodwillAPITests */,
+				B7C3163C2783BB8600106616 /* ShopGoodwillAPIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B7C3161B2783BB8300106616 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7C3162D2783BB8500106616 /* LaunchScreen.storyboard in Resources */,
+				B7C3162A2783BB8500106616 /* Assets.xcassets in Resources */,
+				B7C316282783BB8300106616 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7C316312783BB8600106616 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7C3163B2783BB8600106616 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B7C316192783BB8300106616 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7C316252783BB8300106616 /* ViewController.swift in Sources */,
+				B7C316212783BB8300106616 /* AppDelegate.swift in Sources */,
+				B7C316232783BB8300106616 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7C3162F2783BB8600106616 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7C316382783BB8600106616 /* ShopGoodwillAPITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7C316392783BB8600106616 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7C316442783BB8600106616 /* ShopGoodwillAPIUITestsLaunchTests.swift in Sources */,
+				B7C316422783BB8600106616 /* ShopGoodwillAPIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B7C316352783BB8600106616 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7C3161C2783BB8300106616 /* ShopGoodwillAPI */;
+			targetProxy = B7C316342783BB8600106616 /* PBXContainerItemProxy */;
+		};
+		B7C3163F2783BB8600106616 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7C3161C2783BB8300106616 /* ShopGoodwillAPI */;
+			targetProxy = B7C3163E2783BB8600106616 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B7C316262783BB8300106616 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7C316272783BB8300106616 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B7C3162B2783BB8500106616 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7C3162C2783BB8500106616 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B7C316452783BB8600106616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B7C316462783BB8600106616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B7C316482783BB8600106616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 499Y36A3G2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShopGoodwillAPI/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ldb.ShopGoodwillAPI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B7C316492783BB8600106616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 499Y36A3G2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShopGoodwillAPI/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ldb.ShopGoodwillAPI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B7C3164B2783BB8600106616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 499Y36A3G2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ldb.ShopGoodwillAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShopGoodwillAPI.app/ShopGoodwillAPI";
+			};
+			name = Debug;
+		};
+		B7C3164C2783BB8600106616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 499Y36A3G2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ldb.ShopGoodwillAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShopGoodwillAPI.app/ShopGoodwillAPI";
+			};
+			name = Release;
+		};
+		B7C3164E2783BB8600106616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 499Y36A3G2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ldb.ShopGoodwillAPIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShopGoodwillAPI;
+			};
+			name = Debug;
+		};
+		B7C3164F2783BB8600106616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 499Y36A3G2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ldb.ShopGoodwillAPIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShopGoodwillAPI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B7C316182783BB8300106616 /* Build configuration list for PBXProject "ShopGoodwillAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7C316452783BB8600106616 /* Debug */,
+				B7C316462783BB8600106616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7C316472783BB8600106616 /* Build configuration list for PBXNativeTarget "ShopGoodwillAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7C316482783BB8600106616 /* Debug */,
+				B7C316492783BB8600106616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7C3164A2783BB8600106616 /* Build configuration list for PBXNativeTarget "ShopGoodwillAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7C3164B2783BB8600106616 /* Debug */,
+				B7C3164C2783BB8600106616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7C3164D2783BB8600106616 /* Build configuration list for PBXNativeTarget "ShopGoodwillAPIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7C3164E2783BB8600106616 /* Debug */,
+				B7C3164F2783BB8600106616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B7C316502783BC3400106616 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		B7C316532783BDF300106616 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B7C316512783BC3400106616 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7C316502783BC3400106616 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B7C316542783BDF300106616 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7C316532783BDF300106616 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B7C316152783BB8300106616 /* Project object */;
+}
