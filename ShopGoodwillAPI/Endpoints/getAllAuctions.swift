@@ -18,7 +18,7 @@ class getAllAuctions {
         "categoryLevelNo": "1", // why is this a string
         "catIds": "",
         "closedAuctionDaysBack": "7", // string???????
-        "closedAuctionEndingDate": "1/3/2022",
+        "closedAuctionEndingDate": "1/5/2022",
         "highPrice": "999999", // why.. what???
         "isFromHeaderMenuTab": false,
         "isMultipleCategoryIds": false,

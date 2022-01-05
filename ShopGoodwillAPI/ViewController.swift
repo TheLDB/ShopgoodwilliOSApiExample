@@ -12,8 +12,11 @@ class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        let importGetAllAuctions = getAllAuctions()
-        importGetAllAuctions.getAuctions()
+//        let importGetAllAuctions = getAllAuctions()
+//        let importSpecificSearch = specificSearch()
+        let importOpenOrders = getOpenOrders()
+//        importGetAllAuctions.getAuctions()
+        importOpenOrders.getOpenOrders()
 	}
 }
 

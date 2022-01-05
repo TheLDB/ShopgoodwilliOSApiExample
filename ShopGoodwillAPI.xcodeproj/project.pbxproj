@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6F19F0F327859890005599E0 /* specificSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19F0F227859890005599E0 /* specificSearch.swift */; };
 		6F19F0F5278598C2005599E0 /* getAllAuctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19F0F4278598C2005599E0 /* getAllAuctions.swift */; };
+		6F36868327861D360018C12A /* getOpenOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F36868227861D360018C12A /* getOpenOrders.swift */; };
 		B7C316212783BB8300106616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C316202783BB8300106616 /* AppDelegate.swift */; };
 		B7C316232783BB8300106616 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C316222783BB8300106616 /* SceneDelegate.swift */; };
 		B7C316252783BB8300106616 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C316242783BB8300106616 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		6F19F0F227859890005599E0 /* specificSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = specificSearch.swift; sourceTree = "<group>"; };
 		6F19F0F4278598C2005599E0 /* getAllAuctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getAllAuctions.swift; sourceTree = "<group>"; };
+		6F36868227861D360018C12A /* getOpenOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getOpenOrders.swift; sourceTree = "<group>"; };
 		B7C3161D2783BB8300106616 /* ShopGoodwillAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopGoodwillAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C316202783BB8300106616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7C316222783BB8300106616 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				6F19F0F227859890005599E0 /* specificSearch.swift */,
 				6F19F0F4278598C2005599E0 /* getAllAuctions.swift */,
+				6F36868227861D360018C12A /* getOpenOrders.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				B7C316232783BB8300106616 /* SceneDelegate.swift in Sources */,
 				6F19F0F5278598C2005599E0 /* getAllAuctions.swift in Sources */,
 				6F19F0F327859890005599E0 /* specificSearch.swift in Sources */,
+				6F36868327861D360018C12A /* getOpenOrders.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
