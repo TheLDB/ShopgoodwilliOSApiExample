@@ -12,47 +12,53 @@ import SwiftyJSON
 class specificSearch {
     struct DecodableType: Decodable { let url: String }
     let url = "https://buyerapi.shopgoodwill.com/api/Search/ItemListing"
-    let aucParams: [String: Any] = [
-        "categoryId": 0,
-        "categoryLevel": 1,
-        "categoryLevelNo": "1", // why is this a string
-        "catIds": "",
-        "closedAuctionDaysBack": "7", // string???????
-        "closedAuctionEndingDate": "1/5/2022",
-        "highPrice": "999999", // why.. what???
-        "isFromHeaderMenuTab": false,
-        "isMultipleCategoryIds": false,
-        "isSize": false,
-        "isWeddingCatagory": "false",
-        "layout": "",
-        "lowPrice": "0",
-        "page": "1",
-        "pageSize": "40",
-        "partNumber": "",
-        "savedSearchId": 0,
-        "searchBuyNowOnly": "",
-        "searchCanadaShipping": "false", // i hate it here
-        "searchClosedAuctions": "false", // ^
-        "searchDescriptions": "false",
-        "searchInternationalShippingOnly": "false",
-        "searchNoPickupOnly": "false",
-        "searchOneCentShippingOnly": "false",
-        "searchPickupOnly": "false",
-        
-        
-        "searchText": "iPhone", // Yes, its as simple as this
-        
-        
-        "searchUSOnlyShipping": "false",
-        "selectedCategoryIds": "",
-        "selectedGroup": "",
-        "selectedSellerIds": "",
-        "sortColumn": "1",
-        "sortDescending": "false",
-        "useBuyerPrefs": "true"
-    ]
     
-    func getAuctions() {
+    func getAuctions(searchText: String) {
+        let currentDateTime = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy"
+        let someDateTime = formatter.string(from: currentDateTime)
+//        print(someDateTime)
+
+        let aucParams: [String: Any] = [
+            "categoryId": 0,
+            "categoryLevel": 1,
+            "categoryLevelNo": "1", // why is this a string
+            "catIds": "",
+            "closedAuctionDaysBack": "7", // string???????
+            "closedAuctionEndingDate": someDateTime,
+            "highPrice": "999999", // why.. what???
+            "isFromHeaderMenuTab": false,
+            "isMultipleCategoryIds": false,
+            "isSize": false,
+            "isWeddingCatagory": "false",
+            "layout": "",
+            "lowPrice": "0",
+            "page": "1",
+            "pageSize": "40",
+            "partNumber": "",
+            "savedSearchId": 0,
+            "searchBuyNowOnly": "",
+            "searchCanadaShipping": "false", // i hate it here
+            "searchClosedAuctions": "false", // ^
+            "searchDescriptions": "false",
+            "searchInternationalShippingOnly": "false",
+            "searchNoPickupOnly": "false",
+            "searchOneCentShippingOnly": "false",
+            "searchPickupOnly": "false",
+            
+            
+            "searchText": searchText, // Yes, its as simple as this
+            
+            
+            "searchUSOnlyShipping": "false",
+            "selectedCategoryIds": "",
+            "selectedGroup": "",
+            "selectedSellerIds": "",
+            "sortColumn": "1",
+            "sortDescending": "false",
+            "useBuyerPrefs": "true"
+        ]
         AF.request(url, method: .post, parameters: aucParams, encoding: JSONEncoding.default).responseDecodable(of: DecodableType.self) { response in
                 do {
                     let json = try JSON(data: response.data!) // Uses JSONSwifty to parse JSON

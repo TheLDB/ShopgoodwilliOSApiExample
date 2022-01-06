@@ -11,9 +11,11 @@ class BrowseTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let allAuctions = getAllAuctions()
-        allAuctions.getAuctions()
-        print(allAuctions)
+        let specificSearch = specificSearch()
+        specificSearch.getAuctions(searchText: "iPhone")
+//        let allAuctions = getAllAuctions()
+//        allAuctions.getAuctions()
+//        print(allAuctions)
     }
 
     // MARK: - Table view data source
