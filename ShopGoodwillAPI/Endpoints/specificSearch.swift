@@ -6,74 +6,42 @@
 //
 
 import Foundation
-import Alamofire
-import SwiftyJSON
 
-class specificSearch {
-    struct DecodableType: Decodable { let url: String }
-    let url = "https://buyerapi.shopgoodwill.com/api/Search/ItemListing"
-    
-    func getAuctions(searchText: String) {
-        let currentDateTime = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MM/dd/yyyy"
-        let someDateTime = formatter.string(from: currentDateTime)
-//        print(someDateTime)
 
-        let aucParams: [String: Any] = [
-            "categoryId": 0,
-            "categoryLevel": 1,
-            "categoryLevelNo": "1", // why is this a string
-            "catIds": "",
-            "closedAuctionDaysBack": "7", // string???????
-            "closedAuctionEndingDate": someDateTime,
-            "highPrice": "999999", // why.. what???
-            "isFromHeaderMenuTab": false,
-            "isMultipleCategoryIds": false,
-            "isSize": false,
-            "isWeddingCatagory": "false",
-            "layout": "",
-            "lowPrice": "0",
-            "page": "1",
-            "pageSize": "40",
-            "partNumber": "",
-            "savedSearchId": 0,
-            "searchBuyNowOnly": "",
-            "searchCanadaShipping": "false", // i hate it here
-            "searchClosedAuctions": "false", // ^
-            "searchDescriptions": "false",
-            "searchInternationalShippingOnly": "false",
-            "searchNoPickupOnly": "false",
-            "searchOneCentShippingOnly": "false",
-            "searchPickupOnly": "false",
-            
-            
-            "searchText": searchText, // Yes, its as simple as this
-            
-            
-            "searchUSOnlyShipping": "false",
-            "selectedCategoryIds": "",
-            "selectedGroup": "",
-            "selectedSellerIds": "",
-            "sortColumn": "1",
-            "sortDescending": "false",
-            "useBuyerPrefs": "true"
-        ]
-        AF.request(url, method: .post, parameters: aucParams, encoding: JSONEncoding.default).responseDecodable(of: DecodableType.self) { response in
-                do {
-                    let json = try JSON(data: response.data!) // Uses JSONSwifty to parse JSON
-                    
-                    let specificAuctionResults = json["searchResults"]["items"] // Gets only the stuff we need from the results
-                    
-                    specificAuctionResults.forEach({
-                        // $0.1 = Value
-                        // $0.0 = Key
-                        print($0.1)
-                    })
-                }
-                catch {
-                    print(error) // Catch any errors (like goodwill being down)
-                }
-            }
+// Please make changes to the code in SearchTableViewController.swift now
+
+struct BrowseListingInfo: Decodable {
+    enum Category: String, Decodable {
+        case swift, combine, debugging, xcode
     }
+    
+    let isFavorite: Bool
+    let shippingPrice: Float
+    let relistId: Int
+    let numBids: Int
+    let remainingTime: String
+    let itemCount: Int
+    let featured: Bool
+    let categoryName: String
+    let categoryId: Int
+    let isStock: Bool
+    let views: Int
+    let itemgallery: Bool
+    let buyNowPrice: Float
+    let itemId: Int
+    let imageStatus: Int
+    let imageURL: String
+    let galleryURL: String
+    let endTime: String
+    let discount: Float
+    let gallery: Bool
+    let title: String
+    let discountedBuyNowPrice: Float
+    let minimumBid: Float
+    let description: String
+    let startingPrice: Float
+    let imagePurged: Bool
+    let currentPrice: Float
+    let itemfeatured: Bool
+    let startTime: String
 }

@@ -7,16 +7,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Browse Table View Controller-->
+        <!--Search-->
         <scene sceneID="pX6-8S-7RN">
             <objects>
-                <tableViewController id="mXH-C1-RTf" customClass="BrowseTableViewController" customModule="ShopGoodwillAPI" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="mXH-C1-RTf" customClass="SearchTableViewController" customModule="ShopGoodwillAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="kpR-ca-0Du">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <inset key="separatorInset" minX="110" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noImageCell" id="fwI-j3-D9D" customClass="BrowseTableViewCell" customModule="ShopGoodwillAPI" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noImageCell" id="fwI-j3-D9D" customClass="SearchTableViewCell" customModule="ShopGoodwillAPI" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="139.66667175292969"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fwI-j3-D9D" id="eRg-Xy-lNj">
@@ -77,63 +78,80 @@
                                     <outlet property="titleLabel" destination="rGo-Fz-FAD" id="O73-Lo-gJH"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="H3w-Oh-SmW">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" id="H3w-Oh-SmW" customClass="SearchTableViewCell" customModule="ShopGoodwillAPI" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="184.33333778381348" width="375" height="139.66667175292969"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H3w-Oh-SmW" id="QSd-UR-GJl">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="139.66667175292969"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Item Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxa-74-deA">
-                                            <rect key="frame" x="118" y="16" width="241" height="26.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mxa-74-deA">
+                                            <rect key="frame" x="118" y="16" width="241" height="26.666666666666671"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJr-kN-URL">
-                                            <rect key="frame" x="118" y="46.5" width="241" height="23"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UJr-kN-URL">
+                                            <rect key="frame" x="118" y="46.666666666666664" width="241" height="22.999999999999993"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="23" id="Q8t-cw-9sn"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0 Bids" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHM-bu-b5b">
-                                            <rect key="frame" x="118" y="73.5" width="241" height="23"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Bids" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xHM-bu-b5b">
+                                            <rect key="frame" x="118" y="73.666666666666671" width="241" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="23" id="NKV-y7-XGV"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0 days 0 hours left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQn-SZ-LaZ">
-                                            <rect key="frame" x="118" y="101" width="241" height="81"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 days 0 hours left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sQn-SZ-LaZ">
+                                            <rect key="frame" x="118" y="100.66666666666667" width="241" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="23" id="DC3-dh-Ulm"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c8o-nF-JYJ">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="c8o-nF-JYJ">
                                             <rect key="frame" x="0.0" y="0.0" width="110" height="139.66666666666666"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="110" id="HFk-41-XPC"/>
                                             </constraints>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="1" scale="large" weight="bold"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="xHM-bu-b5b" firstAttribute="top" secondItem="UJr-kN-URL" secondAttribute="bottom" constant="4" id="1lZ-eC-JzL"/>
-                                        <constraint firstAttribute="trailing" secondItem="UJr-kN-URL" secondAttribute="trailing" constant="16" id="6ku-fA-RX8"/>
-                                        <constraint firstItem="xHM-bu-b5b" firstAttribute="leading" secondItem="c8o-nF-JYJ" secondAttribute="trailing" constant="8" symbolic="YES" id="8ia-oX-1cV"/>
-                                        <constraint firstItem="UJr-kN-URL" firstAttribute="top" secondItem="mxa-74-deA" secondAttribute="bottom" constant="4" id="9wz-sy-bJX"/>
-                                        <constraint firstItem="UJr-kN-URL" firstAttribute="leading" secondItem="c8o-nF-JYJ" secondAttribute="trailing" constant="8" symbolic="YES" id="AQA-gz-aVI"/>
-                                        <constraint firstItem="mxa-74-deA" firstAttribute="leading" secondItem="c8o-nF-JYJ" secondAttribute="trailing" constant="8" symbolic="YES" id="EKN-Fz-vc6"/>
+                                        <constraint firstItem="UJr-kN-URL" firstAttribute="leading" secondItem="c8o-nF-JYJ" secondAttribute="trailing" constant="8" symbolic="YES" id="1YA-x0-e5g"/>
+                                        <constraint firstAttribute="trailing" secondItem="UJr-kN-URL" secondAttribute="trailing" constant="16" id="8os-E0-Tl5"/>
+                                        <constraint firstAttribute="trailing" secondItem="xHM-bu-b5b" secondAttribute="trailing" constant="16" id="8yM-lu-Glx"/>
+                                        <constraint firstAttribute="trailing" secondItem="mxa-74-deA" secondAttribute="trailing" constant="16" id="9PP-Pk-2Uo"/>
+                                        <constraint firstItem="UJr-kN-URL" firstAttribute="top" secondItem="mxa-74-deA" secondAttribute="bottom" constant="4" id="9Xm-mz-dKh"/>
+                                        <constraint firstItem="xHM-bu-b5b" firstAttribute="leading" secondItem="c8o-nF-JYJ" secondAttribute="trailing" constant="8" symbolic="YES" id="CLa-aR-m33"/>
+                                        <constraint firstItem="mxa-74-deA" firstAttribute="leading" secondItem="c8o-nF-JYJ" secondAttribute="trailing" constant="8" symbolic="YES" id="N5U-RR-Jhi"/>
                                         <constraint firstItem="c8o-nF-JYJ" firstAttribute="leading" secondItem="QSd-UR-GJl" secondAttribute="leading" id="OQ5-rb-luK"/>
-                                        <constraint firstItem="mxa-74-deA" firstAttribute="top" secondItem="QSd-UR-GJl" secondAttribute="top" constant="16" id="OnD-ZF-cOQ"/>
-                                        <constraint firstAttribute="trailing" secondItem="sQn-SZ-LaZ" secondAttribute="trailing" constant="16" id="UuU-Lx-F0S"/>
-                                        <constraint firstAttribute="bottom" secondItem="sQn-SZ-LaZ" secondAttribute="bottom" constant="16" id="VKR-Ym-Tbt"/>
-                                        <constraint firstAttribute="trailing" secondItem="xHM-bu-b5b" secondAttribute="trailing" constant="16" id="VxW-Ss-h5C"/>
-                                        <constraint firstItem="sQn-SZ-LaZ" firstAttribute="top" secondItem="xHM-bu-b5b" secondAttribute="bottom" constant="4" id="dc4-9J-qci"/>
-                                        <constraint firstAttribute="trailing" secondItem="mxa-74-deA" secondAttribute="trailing" constant="16" id="jOh-Lp-9pi"/>
-                                        <constraint firstItem="sQn-SZ-LaZ" firstAttribute="leading" secondItem="c8o-nF-JYJ" secondAttribute="trailing" constant="8" symbolic="YES" id="mT4-C4-lj5"/>
+                                        <constraint firstItem="mxa-74-deA" firstAttribute="top" secondItem="QSd-UR-GJl" secondAttribute="top" constant="16" id="Sgn-Oi-F76"/>
+                                        <constraint firstItem="sQn-SZ-LaZ" firstAttribute="top" secondItem="xHM-bu-b5b" secondAttribute="bottom" constant="4" id="cYX-BZ-L6I"/>
+                                        <constraint firstAttribute="trailing" secondItem="sQn-SZ-LaZ" secondAttribute="trailing" constant="16" id="d4W-mQ-2o4"/>
+                                        <constraint firstAttribute="bottom" secondItem="sQn-SZ-LaZ" secondAttribute="bottom" constant="16" id="l4i-ZH-n2k"/>
                                         <constraint firstAttribute="bottom" secondItem="c8o-nF-JYJ" secondAttribute="bottom" id="p8u-Up-s5i"/>
+                                        <constraint firstItem="xHM-bu-b5b" firstAttribute="top" secondItem="UJr-kN-URL" secondAttribute="bottom" constant="4" id="pGK-PE-0OI"/>
+                                        <constraint firstItem="sQn-SZ-LaZ" firstAttribute="leading" secondItem="c8o-nF-JYJ" secondAttribute="trailing" constant="8" symbolic="YES" id="pM0-AU-T8f"/>
                                         <constraint firstItem="c8o-nF-JYJ" firstAttribute="top" secondItem="QSd-UR-GJl" secondAttribute="top" id="zTC-W3-7Wt"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bidsLabel" destination="xHM-bu-b5b" id="TkQ-QA-WFJ"/>
+                                    <outlet property="daysLeftLabel" destination="sQn-SZ-LaZ" id="RlG-d6-Gap"/>
+                                    <outlet property="mainImage" destination="c8o-nF-JYJ" id="EcU-GT-xby"/>
+                                    <outlet property="priceLabel" destination="UJr-kN-URL" id="8Hm-AO-jAP"/>
+                                    <outlet property="titleLabel" destination="mxa-74-deA" id="v8n-JG-PKd"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -141,20 +159,20 @@
                             <outlet property="delegate" destination="mXH-C1-RTf" id="S0h-cO-aRN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="2Fl-SE-YSk"/>
+                    <navigationItem key="navigationItem" title="Search" largeTitleDisplayMode="always" id="2Fl-SE-YSk"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSG-vo-vgL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2338" y="136"/>
+            <point key="canvasLocation" x="2336.8000000000002" y="135.96059113300493"/>
         </scene>
-        <!--Browse-->
+        <!--Search-->
         <scene sceneID="PbW-zO-94e">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sXg-K1-z47" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Browse" image="bag.fill" catalog="system" id="ocL-xB-0am"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="ocL-xB-0am"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kgo-a3-kPC">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Kgo-a3-kPC">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -187,7 +205,8 @@
     </scenes>
     <color key="tintColor" name="AccentColor"/>
     <resources>
-        <image name="bag.fill" catalog="system" width="128" height="128"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <namedColor name="AccentColor">
             <color red="0.28999999165534973" green="0.43900001049041748" blue="0.62400001287460327" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
