@@ -48,22 +48,23 @@ class getAllAuctions {
         "useBuyerPrefs": "true"
     ]
     
+    
     func getAuctions() {
         AF.request(url, method: .post, parameters: aucParams, encoding: JSONEncoding.default).responseDecodable(of: DecodableType.self) { response in
-                do {
-                    let json = try JSON(data: response.data!) // Uses JSONSwifty to parse JSON
-                    
-                    let specificAuctionResults = json["searchResults"]["items"] // Gets only the stuff we need from the results
-                    
-                    specificAuctionResults.forEach({
-                        // $0.1 = Value
-                        // $0.0 = Key
-                        print($0.1)
-                    })
-                }
-                catch {
-                    print(error) // Catch any errors (like goodwill being down)
-                }
+            do {
+                let json = try JSON(data: response.data!) // Uses JSONSwifty to parse JSON
+                
+                let specificAuctionResults = json["searchResults"]["items"] // Gets only the stuff we need from the results
+                
+                specificAuctionResults.forEach({
+                    // $0.1 = Value
+                    // $0.0 = Key
+                    print($0.1)
+                })
             }
+            catch {
+                print(error) // Catch any errors (like goodwill being down)
+            }
+        }
     }
 }
