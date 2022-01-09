@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		661F3A3127869FC70047560A /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F3A3027869FC70047560A /* SearchTableViewController.swift */; };
+		663AF4BB278B9D6C00E90C3B /* ItemDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663AF4BA278B9D6C00E90C3B /* ItemDetailsTableViewController.swift */; };
 		6F19F0F327859890005599E0 /* specificSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19F0F227859890005599E0 /* specificSearch.swift */; };
 		6F19F0F5278598C2005599E0 /* getAllAuctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19F0F4278598C2005599E0 /* getAllAuctions.swift */; };
 		6F36868327861D360018C12A /* getOpenOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F36868227861D360018C12A /* getOpenOrders.swift */; };
@@ -43,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		661F3A3027869FC70047560A /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		663AF4BA278B9D6C00E90C3B /* ItemDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsTableViewController.swift; sourceTree = "<group>"; };
+		66D68A1C278B977E0092C13B /* ShopGoodwillAPI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShopGoodwillAPI.entitlements; sourceTree = "<group>"; };
 		6F19F0F227859890005599E0 /* specificSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = specificSearch.swift; sourceTree = "<group>"; };
 		6F19F0F4278598C2005599E0 /* getAllAuctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getAllAuctions.swift; sourceTree = "<group>"; };
 		6F36868227861D360018C12A /* getOpenOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getOpenOrders.swift; sourceTree = "<group>"; };
@@ -121,11 +124,13 @@
 		B7C3161F2783BB8300106616 /* ShopGoodwillAPI */ = {
 			isa = PBXGroup;
 			children = (
+				66D68A1C278B977E0092C13B /* ShopGoodwillAPI.entitlements */,
 				6F19F0F127859825005599E0 /* Endpoints */,
 				B7C316202783BB8300106616 /* AppDelegate.swift */,
 				B7C316222783BB8300106616 /* SceneDelegate.swift */,
 				B7C316242783BB8300106616 /* ViewController.swift */,
 				B7C316262783BB8300106616 /* Main.storyboard */,
+				663AF4BA278B9D6C00E90C3B /* ItemDetailsTableViewController.swift */,
 				661F3A3027869FC70047560A /* SearchTableViewController.swift */,
 				B7C316292783BB8500106616 /* Assets.xcassets */,
 				B7C3162B2783BB8500106616 /* LaunchScreen.storyboard */,
@@ -293,6 +298,7 @@
 				B7C316252783BB8300106616 /* ViewController.swift in Sources */,
 				B7C316212783BB8300106616 /* AppDelegate.swift in Sources */,
 				B7C316232783BB8300106616 /* SceneDelegate.swift in Sources */,
+				663AF4BB278B9D6C00E90C3B /* ItemDetailsTableViewController.swift in Sources */,
 				661F3A3127869FC70047560A /* SearchTableViewController.swift in Sources */,
 				6F19F0F5278598C2005599E0 /* getAllAuctions.swift in Sources */,
 				6F19F0F327859890005599E0 /* specificSearch.swift in Sources */,
@@ -473,23 +479,27 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ShopGoodwillAPI/ShopGoodwillAPI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 499Y36A3G2;
+				DEVELOPMENT_TEAM = 6755LPJ5W2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShopGoodwillAPI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShopGoodwill;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ldb.ShopGoodwillAPI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunapps.shopgoodwill;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -501,23 +511,27 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ShopGoodwillAPI/ShopGoodwillAPI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 499Y36A3G2;
+				DEVELOPMENT_TEAM = 6755LPJ5W2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShopGoodwillAPI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShopGoodwill;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ldb.ShopGoodwillAPI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunapps.shopgoodwill;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -2,7 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2LP-kS-dMx">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -76,23 +79,24 @@
                                     <outlet property="daysLeftLabel" destination="X4J-MV-WHH" id="Em7-61-Blz"/>
                                     <outlet property="priceLabel" destination="FAB-s5-8jP" id="vXu-K9-q3R"/>
                                     <outlet property="titleLabel" destination="rGo-Fz-FAD" id="O73-Lo-gJH"/>
+                                    <segue destination="JcR-dI-xqI" kind="show" id="MUW-sO-WTK"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" id="H3w-Oh-SmW" customClass="SearchTableViewCell" customModule="ShopGoodwillAPI" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="184.33333778381348" width="375" height="139.66667175292969"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" rowHeight="140" id="H3w-Oh-SmW" customClass="SearchTableViewCell" customModule="ShopGoodwillAPI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="184.33333778381348" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H3w-Oh-SmW" id="QSd-UR-GJl">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139.66667175292969"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mxa-74-deA">
-                                            <rect key="frame" x="118" y="16" width="241" height="26.666666666666671"/>
+                                            <rect key="frame" x="118" y="16" width="241" height="27"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UJr-kN-URL">
-                                            <rect key="frame" x="118" y="46.666666666666664" width="241" height="22.999999999999993"/>
+                                            <rect key="frame" x="118" y="47" width="241" height="23"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="23" id="Q8t-cw-9sn"/>
                                             </constraints>
@@ -101,7 +105,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Bids" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xHM-bu-b5b">
-                                            <rect key="frame" x="118" y="73.666666666666671" width="241" height="23"/>
+                                            <rect key="frame" x="118" y="74" width="241" height="23"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="23" id="NKV-y7-XGV"/>
                                             </constraints>
@@ -110,7 +114,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 days 0 hours left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sQn-SZ-LaZ">
-                                            <rect key="frame" x="118" y="100.66666666666667" width="241" height="23"/>
+                                            <rect key="frame" x="118" y="101" width="241" height="23"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="23" id="DC3-dh-Ulm"/>
                                             </constraints>
@@ -119,9 +123,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="c8o-nF-JYJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="110" height="139.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="140"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="110" id="HFk-41-XPC"/>
+                                                <constraint firstAttribute="height" constant="140" id="rAE-aV-1oi"/>
                                             </constraints>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="1" scale="large" weight="bold"/>
                                         </imageView>
@@ -151,6 +156,7 @@
                                     <outlet property="mainImage" destination="c8o-nF-JYJ" id="EcU-GT-xby"/>
                                     <outlet property="priceLabel" destination="UJr-kN-URL" id="8Hm-AO-jAP"/>
                                     <outlet property="titleLabel" destination="mxa-74-deA" id="v8n-JG-PKd"/>
+                                    <segue destination="JcR-dI-xqI" kind="show" id="AYj-cz-pym"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -163,7 +169,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSG-vo-vgL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2336.8000000000002" y="135.96059113300493"/>
+            <point key="canvasLocation" x="2434" y="136"/>
         </scene>
         <!--Search-->
         <scene sceneID="PbW-zO-94e">
@@ -176,13 +182,16 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uag-iw-iXq">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="mXH-C1-RTf" kind="relationship" relationship="rootViewController" id="L8r-WV-Y3r"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQr-yp-pug" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1621.7391304347827" y="135.9375"/>
+            <point key="canvasLocation" x="1671" y="136"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9z2-SO-AfT">
@@ -202,16 +211,477 @@
             </objects>
             <point key="canvasLocation" x="904" y="136"/>
         </scene>
+        <!--Listing-->
+        <scene sceneID="zCo-Hm-gpS">
+            <objects>
+                <tableViewController id="JcR-dI-xqI" customClass="ItemDetailsTableViewController" customModule="ShopGoodwillAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="WSO-8U-cDC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="GHN-bH-KzW">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="140" id="1jg-4v-cO8">
+                                        <rect key="frame" x="16" y="18" width="343" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1jg-4v-cO8" id="F9R-IM-VWz">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oQs-En-gIb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="140"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="130" id="fOV-F8-ZUb"/>
+                                                    </constraints>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="1" scale="large" weight="bold"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fm3-6Q-Aj4">
+                                                    <rect key="frame" x="175.66666666666663" y="10" width="167.33333333333337" height="120"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="View All Images" subtitle="5 Images" imagePadding="9" titleAlignment="center">
+                                                        <imageReference key="image" image="photo" catalog="system" symbolScale="large"/>
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                        </preferredSymbolConfiguration>
+                                                        <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <fontDescription key="subtitleFontDescription" type="system" weight="medium" pointSize="15"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="fm3-6Q-Aj4" secondAttribute="trailing" id="3Nm-xr-jfi"/>
+                                                <constraint firstItem="fm3-6Q-Aj4" firstAttribute="leading" secondItem="F9R-IM-VWz" secondAttribute="centerX" constant="4" id="AAU-Ur-fC9"/>
+                                                <constraint firstAttribute="bottom" secondItem="fm3-6Q-Aj4" secondAttribute="bottom" constant="10" id="IBF-sN-5j9"/>
+                                                <constraint firstItem="oQs-En-gIb" firstAttribute="top" secondItem="F9R-IM-VWz" secondAttribute="top" id="IDR-1b-S0L"/>
+                                                <constraint firstAttribute="bottom" secondItem="oQs-En-gIb" secondAttribute="bottom" id="eyY-21-RY5"/>
+                                                <constraint firstItem="oQs-En-gIb" firstAttribute="leading" secondItem="F9R-IM-VWz" secondAttribute="leading" id="lVY-io-MIz"/>
+                                                <constraint firstItem="fm3-6Q-Aj4" firstAttribute="top" secondItem="F9R-IM-VWz" secondAttribute="top" constant="10" id="oKb-Q6-CE1"/>
+                                                <constraint firstAttribute="centerX" secondItem="oQs-En-gIb" secondAttribute="trailing" constant="4" id="zIa-u2-hfZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="WuU-Nv-ONx">
+                                        <rect key="frame" x="16" y="158" width="343" height="129.66667175292969"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WuU-Nv-ONx" id="kzX-Lg-BTx">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="129.66667175292969"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E0r-fz-v5u">
+                                                    <rect key="frame" x="16" y="41.666666666666664" width="311" height="22.999999999999993"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="23" id="d1m-Px-aiG"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Bids" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oKV-A8-KoY">
+                                                    <rect key="frame" x="16" y="68.666666666666671" width="311" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="23" id="QjR-nz-seN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 days 0 hours left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ucH-X2-DcG">
+                                                    <rect key="frame" x="16" y="95.666666666666671" width="281" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="23" id="xJV-nI-IKb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" toolTip="Add to Favorites" buttonType="system" lineBreakMode="clip" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zzt-gn-HSP">
+                                                    <rect key="frame" x="305" y="91.666666666666671" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="ijk-Th-jh6"/>
+                                                        <constraint firstAttribute="height" constant="32" id="uvt-cK-7Ga"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="tinted" imagePlacement="top" subtitle="" imagePadding="0.0" cornerStyle="capsule">
+                                                        <imageReference key="image" image="suit.heart" catalog="system" symbolScale="large"/>
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OxH-UV-yWG">
+                                                    <rect key="frame" x="16" y="11.000000000000002" width="311" height="26.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ucH-X2-DcG" firstAttribute="top" secondItem="oKV-A8-KoY" secondAttribute="bottom" constant="4" id="69a-Gv-gSB"/>
+                                                <constraint firstItem="zzt-gn-HSP" firstAttribute="leading" secondItem="ucH-X2-DcG" secondAttribute="trailing" constant="8" symbolic="YES" id="8Zf-s0-diK"/>
+                                                <constraint firstItem="oKV-A8-KoY" firstAttribute="leading" secondItem="kzX-Lg-BTx" secondAttribute="leadingMargin" id="JFr-XK-Xfm"/>
+                                                <constraint firstItem="E0r-fz-v5u" firstAttribute="leading" secondItem="kzX-Lg-BTx" secondAttribute="leadingMargin" id="K9g-ZU-rfD"/>
+                                                <constraint firstItem="oKV-A8-KoY" firstAttribute="trailing" secondItem="kzX-Lg-BTx" secondAttribute="trailingMargin" id="O5I-Lm-EWv"/>
+                                                <constraint firstAttribute="bottom" secondItem="zzt-gn-HSP" secondAttribute="bottom" constant="6" id="OBn-zR-eq7"/>
+                                                <constraint firstItem="ucH-X2-DcG" firstAttribute="leading" secondItem="kzX-Lg-BTx" secondAttribute="leadingMargin" id="QDw-ZG-XGq"/>
+                                                <constraint firstItem="ucH-X2-DcG" firstAttribute="bottom" secondItem="kzX-Lg-BTx" secondAttribute="bottomMargin" id="TIN-Q2-cfO"/>
+                                                <constraint firstAttribute="trailing" secondItem="zzt-gn-HSP" secondAttribute="trailing" constant="6" id="eij-Yv-Cw3"/>
+                                                <constraint firstItem="OxH-UV-yWG" firstAttribute="top" secondItem="kzX-Lg-BTx" secondAttribute="topMargin" id="hU6-ti-OoE"/>
+                                                <constraint firstItem="E0r-fz-v5u" firstAttribute="top" secondItem="OxH-UV-yWG" secondAttribute="bottom" constant="4" id="qp7-9Z-5rX"/>
+                                                <constraint firstItem="OxH-UV-yWG" firstAttribute="trailing" secondItem="kzX-Lg-BTx" secondAttribute="trailingMargin" id="req-DA-Cm3"/>
+                                                <constraint firstItem="oKV-A8-KoY" firstAttribute="top" secondItem="E0r-fz-v5u" secondAttribute="bottom" constant="4" id="tEo-QX-SGe"/>
+                                                <constraint firstItem="E0r-fz-v5u" firstAttribute="trailing" secondItem="kzX-Lg-BTx" secondAttribute="trailingMargin" id="whS-1F-lt5"/>
+                                                <constraint firstItem="OxH-UV-yWG" firstAttribute="leading" secondItem="kzX-Lg-BTx" secondAttribute="leadingMargin" id="xDn-Dt-kJN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Item Details" id="2P8-RP-ssj">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="Z45-UE-FHu" detailTextLabel="Pbx-HS-gfd" style="IBUITableViewCellStyleValue1" id="rMn-BJ-gaJ" customClass="SearchTableViewCell" customModule="ShopGoodwillAPI" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="337.33333778381342" width="343" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rMn-BJ-gaJ" id="eH4-aK-NFQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Item ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z45-UE-FHu">
+                                                    <rect key="frame" x="15.999999999999996" y="11.999999999999998" width="56.666666666666664" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pbx-HS-gfd">
+                                                    <rect key="frame" x="263" y="11.999999999999998" width="64" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="nAI-3b-58D" detailTextLabel="W6D-HF-elg" style="IBUITableViewCellStyleValue1" id="AE5-5L-dDv" customClass="SearchTableViewCell" customModule="ShopGoodwillAPI" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="381.00000572204584" width="343" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AE5-5L-dDv" id="4wR-8o-Gsc">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Number of Bids" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nAI-3b-58D">
+                                                    <rect key="frame" x="15.999999999999993" y="11.999999999999998" width="123.33333333333333" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W6D-HF-elg">
+                                                    <rect key="frame" x="316.33333333333331" y="11.999999999999998" width="10.666666666666666" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="W6H-Hr-GpL" detailTextLabel="etw-Pp-dec" style="IBUITableViewCellStyleValue1" id="BMC-bq-THo" customClass="SearchTableViewCell" customModule="ShopGoodwillAPI" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="424.66667366027826" width="343" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BMC-bq-THo" id="IvH-BA-N8f">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Bid Increment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W6H-Hr-GpL">
+                                                    <rect key="frame" x="16" y="11.999999999999998" width="111" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="$1.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="etw-Pp-dec">
+                                                    <rect key="frame" x="283.66666666666669" y="11.999999999999998" width="43.333333333333336" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="ydZ-fb-Y4R" detailTextLabel="n54-ar-mUi" style="IBUITableViewCellStyleValue1" id="1E2-Ev-NwI" customClass="SearchTableViewCell" customModule="ShopGoodwillAPI" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="468.33334159851069" width="343" height="43.666667938232479"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1E2-Ev-NwI" id="8cc-mO-9Vo">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ydZ-fb-Y4R">
+                                                    <rect key="frame" x="16" y="11.999999999999998" width="72" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="0/0/00 at 0:00 AM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n54-ar-mUi">
+                                                    <rect key="frame" x="184" y="11.999999999999998" width="143" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="Lh6-Y6-Qvp" detailTextLabel="3sG-xk-RSJ" style="IBUITableViewCellStyleValue1" id="WvJ-bc-APo" customClass="SearchTableViewCell" customModule="ShopGoodwillAPI" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="512.00000953674316" width="343" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WvJ-bc-APo" id="iAb-JW-wCa">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Seller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lh6-Y6-Qvp">
+                                                    <rect key="frame" x="16.000000000000004" y="11.999999999999998" width="45.333333333333336" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Goodwill Industries" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3sG-xk-RSJ">
+                                                    <rect key="frame" x="177.33333333333337" y="11.999999999999998" width="149.66666666666666" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="w5M-Oj-u5h">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="1li-Gq-Xgh" imageView="zsg-jd-IDV" style="IBUITableViewCellStyleDefault" id="kbk-QA-WFb" customClass="SearchTableViewCell" customModule="ShopGoodwillAPI" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="591.66667747497559" width="343" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kbk-QA-WFb" id="ygF-GD-cIx">
+                                            <rect key="frame" x="0.0" y="0.0" width="317.33333333333331" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Calculate Shipping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1li-Gq-Xgh">
+                                                    <rect key="frame" x="51.833333333333343" y="0.0" width="257.5" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zsg-jd-IDV">
+                                                    <rect key="frame" x="15.833333333333336" y="11.666666666666666" width="21" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <imageReference key="image" image="shippingbox.fill" catalog="system" renderingMode="hierarchical-single">
+                                                        <hierarchicalColors>
+                                                            <color name="AccentColor"/>
+                                                            <color systemColor="secondaryLabelColor"/>
+                                                            <color systemColor="tertiaryLabelColor"/>
+                                                        </hierarchicalColors>
+                                                    </imageReference>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="wEi-Da-4wp">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="NQS-2C-Vn0" detailTextLabel="fdt-xN-PZR" style="IBUITableViewCellStyleSubtitle" id="qgT-W1-h2B" customClass="SearchTableViewCell" customModule="ShopGoodwillAPI" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="671.33334541320801" width="343" height="58.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qgT-W1-h2B" id="5G6-N3-tMg">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="58.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Item Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NQS-2C-Vn0">
+                                                    <rect key="frame" x="16" y="7.9999999999999982" width="131.33333333333334" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="So much useless information..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fdt-xN-PZR">
+                                                    <rect key="frame" x="16" y="31.333333333333329" width="210" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="More" id="xov-E6-XOu">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="ieP-f3-8nL" imageView="m4L-fp-5gc" style="IBUITableViewCellStyleDefault" id="WZz-gP-yLn" customClass="SearchTableViewCell" customModule="ShopGoodwillAPI" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="779.66667938232422" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WZz-gP-yLn" id="s24-AR-Iez">
+                                            <rect key="frame" x="0.0" y="0.0" width="325.33333333333331" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Item Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ieP-f3-8nL">
+                                                    <rect key="frame" x="43.666666666666686" y="0.0" width="273.66666666666663" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m4L-fp-5gc">
+                                                    <rect key="frame" x="8.5000000000000036" y="12.666666666666664" width="19.666666666666664" height="19"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <imageReference key="image" image="info.circle.fill" catalog="system" renderingMode="hierarchical-single">
+                                                        <hierarchicalColors>
+                                                            <color name="AccentColor"/>
+                                                            <color systemColor="secondaryLabelColor"/>
+                                                            <color systemColor="tertiaryLabelColor"/>
+                                                        </hierarchicalColors>
+                                                    </imageReference>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="gEs-y0-gNb" imageView="lg3-4n-mBc" style="IBUITableViewCellStyleDefault" id="Ekz-qm-ZrS" customClass="SearchTableViewCell" customModule="ShopGoodwillAPI" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="823.66667938232422" width="343" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ekz-qm-ZrS" id="pPL-Ef-Vun">
+                                            <rect key="frame" x="0.0" y="0.0" width="325.33333333333331" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" text="Seller Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gEs-y0-gNb">
+                                                    <rect key="frame" x="43.666666666666686" y="0.0" width="273.66666666666663" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="lg3-4n-mBc">
+                                                    <rect key="frame" x="9.3333333333333357" y="13.333333333333336" width="18" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <imageReference key="image" image="person.fill" catalog="system" renderingMode="hierarchical-single">
+                                                        <hierarchicalColors>
+                                                            <color name="AccentColor"/>
+                                                            <color systemColor="secondaryLabelColor"/>
+                                                            <color systemColor="tertiaryLabelColor"/>
+                                                        </hierarchicalColors>
+                                                    </imageReference>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="cE0-39-GPw" imageView="4mI-tj-lYb" style="IBUITableViewCellStyleDefault" id="MIV-Ss-sMy" customClass="SearchTableViewCell" customModule="ShopGoodwillAPI" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="867.33334732055664" width="343" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MIV-Ss-sMy" id="9zU-BJ-z6Y">
+                                            <rect key="frame" x="0.0" y="0.0" width="325.33333333333331" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" text="Bid History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cE0-39-GPw">
+                                                    <rect key="frame" x="46.333333333333343" y="0.0" width="271" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="4mI-tj-lYb">
+                                                    <rect key="frame" x="5.3333333333333357" y="13.666666666666664" width="26" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <imageReference key="image" image="banknote.fill" catalog="system" renderingMode="hierarchical-single">
+                                                        <hierarchicalColors>
+                                                            <color name="AccentColor"/>
+                                                            <color systemColor="secondaryLabelColor"/>
+                                                            <color systemColor="tertiaryLabelColor"/>
+                                                        </hierarchicalColors>
+                                                    </imageReference>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="PYf-Fr-sGo" imageView="955-Cm-S1k" style="IBUITableViewCellStyleDefault" id="Jgq-a4-DCW" customClass="SearchTableViewCell" customModule="ShopGoodwillAPI" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="911.00001525878906" width="343" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jgq-a4-DCW" id="sGT-DP-d8q">
+                                            <rect key="frame" x="0.0" y="0.0" width="325.33333333333331" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" text="View on Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PYf-Fr-sGo">
+                                                    <rect key="frame" x="43.666666666666686" y="0.0" width="273.66666666666663" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="955-Cm-S1k">
+                                                    <rect key="frame" x="8.5000000000000036" y="12.333333333333336" width="19.666666666666664" height="19"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <imageReference key="image" image="safari.fill" catalog="system" renderingMode="hierarchical-single">
+                                                        <hierarchicalColors>
+                                                            <color name="AccentColor"/>
+                                                            <color systemColor="secondaryLabelColor"/>
+                                                            <color systemColor="tertiaryLabelColor"/>
+                                                        </hierarchicalColors>
+                                                    </imageReference>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="JcR-dI-xqI" id="ekU-mb-Z7d"/>
+                            <outlet property="delegate" destination="JcR-dI-xqI" id="FA7-2A-jxJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Listing" largeTitleDisplayMode="always" id="Umi-Hc-W6t"/>
+                    <connections>
+                        <outlet property="bidsLabel" destination="oKV-A8-KoY" id="kRW-mp-DfZ"/>
+                        <outlet property="daysLeftLabel" destination="ucH-X2-DcG" id="m3U-A3-JXH"/>
+                        <outlet property="mainImage" destination="oQs-En-gIb" id="Nuw-Q3-4Ra"/>
+                        <outlet property="priceLabel" destination="E0r-fz-v5u" id="PyI-21-UGe"/>
+                        <outlet property="titleLabel" destination="OxH-UV-yWG" id="aWA-QG-ASO"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RDq-ai-HNc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3316" y="135.96059113300493"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="AYj-cz-pym"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" name="AccentColor"/>
     <resources>
+        <image name="banknote.fill" catalog="system" width="128" height="78"/>
+        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="safari.fill" catalog="system" width="128" height="121"/>
+        <image name="shippingbox.fill" catalog="system" width="128" height="124"/>
+        <image name="suit.heart" catalog="system" width="128" height="109"/>
         <namedColor name="AccentColor">
             <color red="0.28999999165534973" green="0.43900001049041748" blue="0.62400001287460327" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
