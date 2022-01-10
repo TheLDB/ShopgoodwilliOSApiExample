@@ -9,7 +9,9 @@ import UIKit
 
 class ItemDetailsTableViewController: UITableViewController {
 
-    var itemID: Int = 0
+    var itemID: Int = 136804805
+    // https://shopgoodwill.com/item/136804805
+    
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -19,7 +21,8 @@ class ItemDetailsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let oneItem = oneItem()
+        oneItem.getOneItem(itemID: itemID) // Ideally you pass in the itemID from the past screen
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
