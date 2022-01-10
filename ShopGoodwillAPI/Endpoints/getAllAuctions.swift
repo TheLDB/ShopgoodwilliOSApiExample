@@ -54,6 +54,7 @@ class getAllAuctions {
             "sortDescending": "false",
             "useBuyerPrefs": "true"
         ]
+        
         AF.request(url, method: .post, parameters: aucParams, encoding: JSONEncoding.default).responseDecodable(of: DecodableType.self) { response in
             do {
                 let json = try JSON(data: response.data!) // Uses JSONSwifty to parse JSON
