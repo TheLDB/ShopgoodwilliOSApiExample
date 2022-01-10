@@ -50,7 +50,7 @@ class getAllAuctions {
             "selectedCategoryIds": "",
             "selectedGroup": "",
             "selectedSellerIds": "",
-            "sortColumn": "1",
+            "sortC olumn": "1",
             "sortDescending": "false",
             "useBuyerPrefs": "true"
         ]
