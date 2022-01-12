@@ -26,7 +26,8 @@ class ItemDetailsTableViewController: UITableViewController {
     @IBOutlet weak var bidIncrementLabel: UILabel!
     @IBOutlet weak var endDateLabel: UILabel!
     @IBOutlet weak var sellerNameLabel: UILabel!
-    @IBOutlet weak var itemDescriptionLabel: UILabel!
+    @IBOutlet weak var descriptionFadeOut: UIImageView!
+    @IBOutlet weak var itemDescriptionLabel: UITextView!
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,6 +63,8 @@ class ItemDetailsTableViewController: UITableViewController {
             toReturn = 4
         case 2:
             toReturn = 4
+//        case 3:
+//            toReturn = 1
         default:
             toReturn = UITableView.automaticDimension
         }
@@ -75,16 +78,30 @@ class ItemDetailsTableViewController: UITableViewController {
             toReturn = 4
         case 3:
             toReturn = 4
+//        case 4:
+//            toReturn = 1
         default:
             toReturn = UITableView.automaticDimension
         }
         return toReturn
     }
     
+    
+    @IBAction func showMore(_ sender: Any) {
+        self.tableView.beginUpdates()
+        if self.descriptionFadeOut.isHidden {
+            self.descriptionFadeOut.isHidden = false
+            self.itemDescriptionLabel.isScrollEnabled = true
+        } else {
+            self.descriptionFadeOut.isHidden = true
+            self.itemDescriptionLabel.isScrollEnabled = false
+        }
+        self.tableView.endUpdates()
+    }
+    
     @objc func goBack(_ sender:Any) {
         self.navigationController?.popViewController(animated: true)
     }
-
     
     // Get Data
     struct DecodableType: Decodable { let url: String }
@@ -110,7 +127,7 @@ class ItemDetailsTableViewController: UITableViewController {
                 bidIncrementLabel.text = "$\(String(round(listingInfo.bidIncrement * 100) / 100))"
                 endDateLabel.text = listingInfo.endTime
                 sellerNameLabel.text = listingInfo.sellerCompanyName
-                itemDescriptionLabel.text = listingInfo.description
+                itemDescriptionLabel.attributedText = listingInfo.description.htmlAttributedString(size: 15, color: .label)
                 
                 if priceLabel.text?.suffix(2) == ".0" {
                     priceLabel.text = "\(priceLabel.text!)0"
@@ -131,4 +148,53 @@ class ItemDetailsTableViewController: UITableViewController {
         }
     }
     
+}
+
+
+extension String {
+    func htmlAttributedString(size: CGFloat, color: UIColor) -> NSAttributedString? {
+        let htmlTemplate = """
+        <!doctype html>
+        <html>
+          <head>
+            <style>
+              body {
+                color: \(color.hexString!);
+                font-family: -apple-system;
+                font-size: \(size)px;
+              }
+            </style>
+          </head>
+          <body>
+            \(self)
+          </body>
+        </html>
+        """
+
+        guard let data = htmlTemplate.data(using: .utf8) else {
+            return nil
+        }
+
+        guard let attributedString = try? NSAttributedString(
+            data: data,
+            options: [.documentType: NSAttributedString.DocumentType.html],
+            documentAttributes: nil
+            ) else {
+            return nil
+        }
+
+        return attributedString
+    }
+}
+
+extension UIColor {
+    var hexString:String? {
+        if let components = self.cgColor.components {
+            let r = components[0]
+            let g = components[1]
+            let b = components[2]
+            return  String(format: "#%02x%02x%02x", (Int)(r * 255), (Int)(g * 255), (Int)(b * 255))
+        }
+        return nil
+    }
 }
